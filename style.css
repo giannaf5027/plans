@@ -1,0 +1,865 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f7f9fc;
+
+    color: #1f2937;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --navy: #182b49;
+
+    --blue: #315f8c;
+
+    --light-blue: #eaf2f9;
+
+    --accent: #7898b8;
+
+    --cream: #faf8f3;
+
+    --white: #ffffff;
+
+    --text: #263445;
+
+    --muted: #6b7280;
+
+    --border: #dce3ea;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        0 30px 70px;
+}
+
+
+section {
+    margin-bottom: 90px;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--navy);
+
+    line-height: 1.2;
+}
+
+
+h1 {
+    font-size:
+        clamp(3.5rem, 8vw, 6.5rem);
+
+    letter-spacing: -0.05em;
+
+    margin-bottom: 15px;
+}
+
+
+h2 {
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
+
+    margin-bottom: 25px;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+}
+
+
+h4 {
+    font-size: 1.05rem;
+
+    color: var(--blue);
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+p {
+    margin-bottom: 15px;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    background: var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+nav {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    min-height: 75px;
+
+    padding:
+        0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.logo {
+    text-decoration: none;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    color: var(--navy);
+
+    white-space: nowrap;
+}
+
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    overflow-x: auto;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+    white-space: nowrap;
+
+    padding:
+        5px 0;
+
+    border-bottom:
+        2px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.nav-links a:hover {
+    color: var(--blue);
+
+    border-bottom-color:
+        var(--blue);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.16em;
+
+    font-weight: 800;
+
+    color: var(--blue);
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        100px 0;
+
+    max-width: 850px;
+}
+
+
+.hero h2 {
+    font-size: 1.5rem;
+
+    font-weight: 500;
+
+    color: var(--blue);
+
+    margin-bottom: 25px;
+}
+
+
+.hero > p:last-child {
+    max-width: 680px;
+
+    font-size: 1.15rem;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+    max-width: 850px;
+}
+
+
+.intro p {
+    font-size: 1.05rem;
+
+    color: var(--text);
+}
+
+
+.quote-card {
+    background: var(--navy);
+
+    color: white;
+
+    padding:
+        35px;
+
+    margin-top: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(24, 43, 73, 0.12);
+}
+
+
+.quote-card h3 {
+    color: white;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 20px;
+}
+
+
+.quote-card p {
+    color: #e8eef5;
+
+    margin-bottom: 5px;
+}
+
+
+.quote-card strong {
+    color: white;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    max-width: 750px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   STUDY GRID
+========================================================= */
+
+.study-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.study-card {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 500px;
+
+    box-shadow:
+        0 8px 25px rgba(24, 43, 73, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.study-card:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(24, 43, 73, 0.10);
+}
+
+
+.study-number {
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    color: var(--accent);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+
+.study-card h3 {
+    font-size: 2rem;
+
+    margin-bottom: 5px;
+}
+
+
+.study-card p {
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   STUDY TAGS
+========================================================= */
+
+.study-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.study-tags span {
+    background: var(--light-blue);
+
+    color: var(--blue);
+
+    border-radius: 50px;
+
+    padding:
+        5px 12px;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+}
+
+
+.study-button {
+    display: inline-block;
+
+    margin-top: auto;
+
+    background: var(--navy);
+
+    color: white;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    padding:
+        12px 18px;
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.study-button:hover {
+    background: var(--blue);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   COMING SOON
+========================================================= */
+
+.coming-soon {
+    opacity: 0.65;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f2f5f8
+        );
+}
+
+
+/* =========================================================
+   COMMON THREAD / FRAMEWORK
+========================================================= */
+
+.framework {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+
+.framework > div {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    min-height: 220px;
+}
+
+
+.framework > div > span {
+    display: block;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: var(--accent);
+
+    margin-bottom: 15px;
+}
+
+
+.framework h3 {
+    margin-bottom: 10px;
+}
+
+
+.framework p {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CROSS + FIT FEATURE
+========================================================= */
+
+.feature-section {
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 25px;
+
+    padding:
+        65px 50px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(24, 43, 73, 0.15);
+}
+
+
+.feature-section h2 {
+    color: white;
+
+    font-size:
+        clamp(2.5rem, 6vw, 4.5rem);
+}
+
+
+.feature-section .eyebrow {
+    color: #b9cee2;
+}
+
+
+.feature-section > p:not(.eyebrow) {
+    max-width: 750px;
+
+    margin:
+        20px auto;
+
+    color: #e5ecf3;
+
+    font-size: 1.05rem;
+}
+
+
+.feature-section cite {
+    color: #c5d5e5;
+
+    display: block;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   CROSS + FIT LETTERS
+========================================================= */
+
+.feature-points {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    max-width: 900px;
+
+    margin:
+        45px auto;
+
+    gap: 15px;
+}
+
+
+.feature-points div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.feature-points strong {
+    width: 55px;
+
+    height: 55px;
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.5rem;
+
+    color: white;
+}
+
+
+.feature-points span {
+    color: #d9e3ed;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+
+/* Make the button readable against navy */
+
+.feature-section .study-button {
+    background: white;
+
+    color: var(--navy);
+}
+
+
+.feature-section .study-button:hover {
+    background: var(--light-blue);
+
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.closing {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin:
+        0 auto 80px;
+}
+
+
+.closing h2 {
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+}
+
+
+.closing p {
+    color: var(--muted);
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: var(--navy);
+
+    color: #dce6ef;
+
+    text-align: center;
+
+    padding:
+        30px 20px;
+}
+
+
+footer p {
+    margin: 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .study-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .framework {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .feature-points {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding:
+            18px 20px;
+    }
+
+
+    .nav-links {
+        width: 100%;
+
+        gap: 18px;
+    }
+
+
+    main {
+        padding:
+            0 20px 50px;
+    }
+
+
+    .hero {
+        min-height: 500px;
+
+        padding:
+            70px 0;
+    }
+
+
+    section {
+        margin-bottom: 65px;
+    }
+
+
+    .study-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .framework {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .feature-section {
+        padding:
+            45px 25px;
+    }
+
+
+    .feature-points {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 25px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size:
+            3.2rem;
+    }
+
+
+    h2 {
+        font-size:
+            2rem;
+    }
+
+
+    .study-card {
+        padding:
+            25px;
+    }
+
+
+    .quote-card {
+        padding:
+            25px;
+    }
+
+}
